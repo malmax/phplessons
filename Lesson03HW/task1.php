@@ -4,7 +4,7 @@
 $i = 0;
 while ($i <= 100) {
   if ($i % 3 == 0) {
-    echo $i . "\r\n";
+    echo $i . "<br />\r\n";
   }
   $i++;
 }
@@ -22,14 +22,14 @@ do {
   switch ($i % 2) {
     case 0:
       if ($i === 0) {
-        $arr[] = "$i - это ноль";
+        $arr[] = "$i - это ноль<br />";
       }
       else {
-        $arr[] = "$i - четное число";
+        $arr[] = "$i - четное число<br />";
       }
       break;
     case 1:
-      $arr[] = "$i - нечетное число";
+      $arr[] = "$i - нечетное число<br />";
       break;
   }
   $i++;
@@ -52,5 +52,14 @@ $fileContent = file_get_contents('regions.csv');
 $fileContent = str_replace("\r","",$fileContent);
 $rows = explode("\n",$fileContent);
 foreach($rows as $value) {
+  $value = explode(';',$value);
+  $regions[$value[2]][] = $value[0];
+}
 
+// Вывод массива регионов
+foreach ($regions as $region => $value) {
+  echo "$region: <br />\n";
+  foreach($value as $city) {
+    echo "-$city <br />\n";
+  }
 }
