@@ -24,6 +24,11 @@ function render($file, $variables = array()) {
   }
   else {
     $templateContent = file_get_contents($file);
+
+    //по-умолчанию добавляем меню к каждой странице
+    if(!in_array('menu',array_keys($variables)))
+      $variables['menu'] = get_menu();
+
     foreach ($variables as $key => $value) {
 
       if ($value != NULL) {
@@ -51,6 +56,10 @@ function render($file, $variables = array()) {
         $templateContent = str_replace($key, $value, $templateContent);
       }
     }
+
+    // Замена адресов для статики
+//    $templateContent = str_replace("((WWW_ROOT))", WWW_ROOT, $templateContent);
+
   }
 
   return $templateContent;
@@ -64,5 +73,7 @@ function get_menu() {
     'Каталог' => 'catalog'
   );
 }
+
+
 
 ?>

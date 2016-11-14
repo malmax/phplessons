@@ -1,4 +1,6 @@
 <?php
+define('DEBUG', true);
+
 define('SITE_ROOT', __DIR__);
 define('WWW_ROOT', SITE_ROOT . '/htdocs');
 

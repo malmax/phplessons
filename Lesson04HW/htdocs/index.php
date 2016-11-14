@@ -1,14 +1,14 @@
 <?php
 require_once('../config.php');
+//класс page для хранения информации о страницах в файлах
+require_once (LIB_DIR."/page.php");
+
 
 $vars = array(
-  'index' =>
-    array(
-      'TITLE' => 'Главная страница',
-      'HEADER' => 'Новость',
-      'CONTENT' => 'Идет занятие',
-      'menu' => get_menu(),
-    ),
+  'index' => array_merge(Page::loadPageFromFile('index')->returnArray(), array(
+    'SOME-ATR-NOT-IN-CLASS' => 'some text',
+  )),
+
   'about' =>
     array(
       'TITLE1' => 'О сайте',
