@@ -2,11 +2,16 @@
 require_once('../config.php');
 //класс page для хранения информации о страницах в файлах
 require_once (LIB_DIR."/page.php");
-
+// класс про игры
+require_once (LIB_DIR."/game.php");
 
 $vars = array(
   'index' => array_merge(Page::loadPageFromFile('index')->returnArray(), array(
     'SOME-ATR-NOT-IN-CLASS' => 'some text',
+    //Переопределим CONTENT
+    'CONTENT' => implode("\n",array_map(function($item) {
+      return "<div class=\"container-3\">".$item."</div>\n";
+    },Game::loadAllGames())),
   )),
 
   'about' =>

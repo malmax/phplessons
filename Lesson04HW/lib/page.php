@@ -42,9 +42,9 @@ class Page {
   function savePageToFile() {
     $file = fopen(DATA_DIR . '/' . $this->pageName . '.dat', 'w');
     fwrite($file, serialize($this));
-    fclose();
+    fclose($file);
 
-    return $this . " сохранен в файл " . DATA_DIR . '/' . $this->pageName . '.dat';
+    return $this->title . " сохранен в файл " . DATA_DIR . '/' . $this->pageName . '.dat';
   }
 
   function returnArray() {
