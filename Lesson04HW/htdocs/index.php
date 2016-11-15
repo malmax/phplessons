@@ -17,13 +17,28 @@ $vars = array(
   'about' =>array_merge(Page::loadPageFromFile('about')->returnArray(), array(
       'template' => 'index'
     )),
+
   'news' =>
     array(
+      'template' => 'index',
       'TITLE' => 'Новости',
       'HEADER' => 'Главные новости магазина',
       'CONTENT' => 'Поздравляем, наш магазин игр открылся. Добро пожаловать',
-
+      'PRE-HEADER' => ' ',
+      'SIDE-BAR' => ' ',
+      'BOTTOM' => ' ',
     ),
+  'catalog' => array(
+    'template' => 'index',
+    'TITLE' => 'Каталог',
+    'HEADER' => 'Каталог магазина',
+    'CONTENT' => implode("\n",array_map(function($item) {
+      return "<div class=\"container-3\">".$item."</div>\n";
+    },Game::loadAllGames())),
+    'PRE-HEADER' => ' ',
+    'SIDE-BAR' => ' ',
+    'BOTTOM' => ' ',
+),
 );
 
 //echo render('index');

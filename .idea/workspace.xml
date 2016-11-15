@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71bf0284-296d-4b29-8594-bc7a8682950f" name="Default" comment="complete task 1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/baneronindex.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/clear.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/contact.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/map.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/rowstart.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson04HW/templates/sidebar.tpl.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Lesson04HW/templates/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Lesson04HW/templates/news.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Lesson04HW/templates/rowstart.tpl.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/data/games.csv" afterPath="$PROJECT_DIR$/Lesson04HW/data/games.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/data/index.dat" afterPath="$PROJECT_DIR$/Lesson04HW/data/index.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/data/initpages.php" afterPath="$PROJECT_DIR$/Lesson04HW/data/initpages.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/htdocs/index.php" afterPath="$PROJECT_DIR$/Lesson04HW/htdocs/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/lib/functions.php" afterPath="$PROJECT_DIR$/Lesson04HW/lib/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/lib/page.php" afterPath="$PROJECT_DIR$/Lesson04HW/lib/page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson04HW/templates/index.html" afterPath="$PROJECT_DIR$/Lesson04HW/templates/index.html" />
     </list>
     <ignored path="tyre1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,108 +27,7 @@
     <favorites_list name="tyre1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/htdocs/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/game.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-              <folding>
-                <marker date="1479199036271" expanded="true" signature="2700:3432" ph="..." />
-                <marker date="1479199036271" expanded="true" signature="2737:3110" ph="..." />
-                <marker date="1479199036271" expanded="true" signature="2775:2888" ph="..." />
-                <marker date="1479199036271" expanded="true" signature="2926:3072" ph="..." />
-                <marker date="1479199036271" expanded="true" signature="3261:3396" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="37" />
-              <folding>
-                <element signature="e#1860#1866#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/contact.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contactform.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="initpages.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/data/initpages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="66" column="9" selection-start-line="64" selection-start-column="14" selection-end-line="66" selection-end-column="9" />
-              <folding>
-                <element signature="e#6#87#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="55" column="60" selection-start-line="55" selection-start-column="60" selection-end-line="55" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rowstart.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/rowstart.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,7 +54,6 @@
         <option value="$PROJECT_DIR$/Lesson04HW/config.php" />
         <option value="$PROJECT_DIR$/Lesson04HW/lib/game.php" />
         <option value="$PROJECT_DIR$/Lesson04HW/templates/baneronindex.tpl.html" />
-        <option value="$PROJECT_DIR$/Lesson04HW/htdocs/index.php" />
         <option value="$PROJECT_DIR$/Lesson04HW/templates/sidebar.tpl.html" />
         <option value="$PROJECT_DIR$/Lesson04HW/lib/page.php" />
         <option value="$PROJECT_DIR$/Lesson04HW/templates/contact.tpl.html" />
@@ -176,6 +64,7 @@
         <option value="$PROJECT_DIR$/Lesson04HW/templates/index.html" />
         <option value="$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html" />
         <option value="$PROJECT_DIR$/Lesson04HW/data/initpages.php" />
+        <option value="$PROJECT_DIR$/Lesson04HW/htdocs/index.php" />
       </list>
     </option>
   </component>
@@ -600,7 +489,7 @@
       <workItem from="1479101429203" duration="719000" />
       <workItem from="1479111864121" duration="1095000" />
       <workItem from="1479115889121" duration="12697000" />
-      <workItem from="1479199026909" duration="5482000" />
+      <workItem from="1479199026909" duration="6515000" />
     </task>
     <task id="LOCAL-00001" summary="complete task 1">
       <created>1478093615503</created>
@@ -620,7 +509,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32514000" />
+    <option name="totallyTimeSpent" value="33547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="417" y="0" width="1500" height="1167" extended-state="0" />
@@ -668,14 +557,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
@@ -949,14 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/htdocs/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/clear.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -983,14 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/rowstart.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1007,12 +872,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/data/initpages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
           <folding>
-            <element signature="e#1860#1866#0" expanded="true" />
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/game.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
+          <folding>
+            <marker date="1479199036271" expanded="true" signature="2700:3432" ph="..." />
+            <marker date="1479199036271" expanded="true" signature="2737:3110" ph="..." />
+            <marker date="1479199036271" expanded="true" signature="2775:2888" ph="..." />
+            <marker date="1479199036271" expanded="true" signature="2926:3072" ph="..." />
+            <marker date="1479199036271" expanded="true" signature="3261:3396" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1025,35 +920,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html">
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="39" selection-start-line="0" selection-start-column="39" selection-end-line="0" selection-end-column="39" />
+        <state relative-caret-position="544">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="37" />
+          <folding>
+            <element signature="e#1860#1866#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/data/initpages.php">
+    <entry file="file://$PROJECT_DIR$/Lesson04HW/htdocs/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="66" column="9" selection-start-line="64" selection-start-column="14" selection-end-line="66" selection-end-column="9" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/lib/game.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="7" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-          <folding>
-            <marker date="1479199036271" expanded="true" signature="2700:3432" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="2737:3110" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="2775:2888" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="2926:3072" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="3261:3396" ph="..." />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
