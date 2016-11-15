@@ -26,8 +26,9 @@ function render($file, $variables = array()) {
     $templateContent = file_get_contents($file);
 
     //по-умолчанию добавляем меню к каждой странице
-    if(!in_array('menu',array_keys($variables)))
+    if (!in_array('menu', array_keys($variables))) {
       $variables['menu'] = get_menu();
+    }
 
     foreach ($variables as $key => $value) {
 
@@ -46,6 +47,25 @@ function render($file, $variables = array()) {
               $value = $out;
             }
             break;
+
+          default:
+            if (is_array($value)) {
+              if (isset($value['template'])) {
+                if (file_exists(TPL_DIR . "/" . $value['template'][0])) {
+                  $out = "";
+                  for ($i = 0; $i < count($value['template']); $i++) {
+                    $out .= file_get_contents(TPL_DIR . "/" . $value['template'][$i]);
+                  }
+                  $value = $out;
+                }
+                else {
+                  $value = "Файл " . TPL_DIR . "/" . $value['template'][0] . " не найден.";
+                }
+              }
+              else {
+                $value = "Неизвестный массив " . print_r($value, TRUE);
+              }
+            }
         }
 
 

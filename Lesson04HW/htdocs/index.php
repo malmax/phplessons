@@ -14,32 +14,33 @@ $vars = array(
     },Game::loadAllGames())),
   )),
 
-  'about' =>
-    array(
-      'TITLE1' => 'О сайте',
-      'HEADER1' => 'Создатели',
-      'CONTENT1' => 'Команда программистов',
-      'DIRECTORNAME1' => 'Имя директора',
-      'menu' => get_menu(),
-    ),
+  'about' =>array_merge(Page::loadPageFromFile('about')->returnArray(), array(
+      'template' => 'index'
+    )),
   'news' =>
     array(
       'TITLE' => 'Новости',
       'HEADER' => 'Главные новости магазина',
       'CONTENT' => 'Поздравляем, наш магазин игр открылся. Добро пожаловать',
-      'menu' => get_menu(),
+
     ),
 );
 
 //echo render('index');
 if (isset($_GET['q']) && in_array($_GET['q'], array_keys($vars))) {
   $page_r = $_GET['q'];
+  //свойства даннлой страницы
+  $currentVars = $vars[$page_r];
+  //если в свойствах задан template - используем его
+  if(isset($currentVars['template']))
+    $page_r = $currentVars['template'];
 }
 else {
   $page_r = 'index';
+  $currentVars = $vars[$page_r];
 }
 
 
-echo render($page_r, $vars[$page_r]);
+echo render($page_r, $currentVars);
 
 ?>

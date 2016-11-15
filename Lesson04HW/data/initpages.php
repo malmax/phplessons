@@ -15,48 +15,27 @@ require_once ("../lib/game.php");
 
 $index = new Page('index');
 $index->title = 'Главная страница';
-$index->header = 'Новость';
+$index->header = 'Новинки магазина';
 $index->content = 'Идет занятие';
-$index->top_content = "<div class=\"container-9\">
-            <img src=\"./i/cod_iw_pre_688x400.jpg\" alt=\"Call of Duty Preorder\"/>
-        </div>
-        <div class=\"container-3\">
-            <img src=\"http://placehold.it/225x185\"/>
-            <img src=\"http://placehold.it/225x185\"/>
-        </div>
-        <div class=\"clear\"></div>";
-$index->side_bar = "<h3>Жанры игр</h3>
-                        <ul>
-                            <li><a href=\"#\">аркада</a></li>
-                            <li><a href=\"#\">драки</a></li>
-                            <li><a href=\"#\">симуляторы</a></li>
-                            <li><a href=\"#\">спорт</a></li>
-                            <li><a href=\"#\">гонки</a></li>
-                            <li><a href=\"#\">приключения</a></li>
-                            <li><a href=\"#\">стрелялки</a></li>
-                            <li><a href=\"#\">стратегии</a></li>
-                            <li><a href=\"#\">головоломки</a></li>
-                        </ul>
-                        <h3>Особенности</h3>
-                        <ul>
-                            <li><a href=\"#\">новинка</a></li>
-                            <li><a href=\"#\">распродажа</a></li>
-                            <li><a href=\"#\">популярные</a></li>
-                            <li><a href=\"#\">предзаказ</a></li>
-                            <li><a href=\"#\">выбор редакции</a></li>
-                        </ul>
-                        <h3>По цене</h3>
-                        <ul>
-                            <li><a href=\"#\">до 500р</a></li>
-                            <li><a href=\"#\">от 501 до 1000р</a></li>
-                            <li><a href=\"#\">от 1001 до 2000р</a></li>
-                            <li><a href=\"#\">от 2001 до 3000р</a></li>
-                            <li><a href=\"#\">свыше 3000р</a></li>
-                        </ul>";
+$index->pre_header = array('template'=>array('baneronindex.tpl.html'));
+$index->side_bar = array('template'=>array('sidebar.tpl.html'));
 echo $index->savePageToFile();
 
-// страница
+// страница about
+$index = new Page('about');
+$index->title = 'О сайте';
+$index->header = 'Контактная информация';
+$index->content = array('template'=>array('contact.tpl.html','contactform.tpl.html','clear.tpl.html','map.tpl.html'));
+$index->pre_header = "";
+echo $index->savePageToFile();
 
+// страница news
+$index = new Page('news');
+$index->title = 'Новости магазина';
+$index->header = 'Контактная информация';
+$index->content = array('template'=>array('contact.tpl.html','contactform.tpl.html','clear.tpl.html','map.tpl.html'));
+$index->pre_header = "";
+echo $index->savePageToFile();
 
 
 //обнуляем файл с играми

@@ -10,7 +10,8 @@ require_once("../config.php");
 
 class Page {
 
-  public $title, $header, $content, $top_content, $side_bar;
+  public $title, $header, $side_bar, $bottom;
+  public $content, $pre_header; //могут быть массивом с указанием внешнего файла с контентом
   private $pageName;
 
   function __construct($pageName) {
@@ -24,8 +25,9 @@ class Page {
       $this->title = $obj->title;
       $this->header = $obj->header;
       $this->content = $obj->content;
-      $this->top_content = $obj->top_content;
+      $this->pre_header = $obj->pre_header;
       $this->side_bar = $obj->side_bar;
+      $this->bottom = $obj->bottom;
       //TODO:как сразу присвоить все свойства массива текущей копии класса?
     }
 
@@ -44,16 +46,17 @@ class Page {
     fwrite($file, serialize($this));
     fclose($file);
 
-    return $this->title . " сохранен в файл " . DATA_DIR . '/' . $this->pageName . '.dat';
+    return $this->title . " сохранен в файл " . DATA_DIR . '/' . $this->pageName . '.dat<br />';
   }
 
   function returnArray() {
     return array(
-      'TITLE' => $this->title,
-      'HEADER' => $this->header,
-      'CONTENT' => $this->content,
-      'TOP-CONTENT' => $this->top_content,
-      'SIDE-BAR' => $this->side_bar,
+      'TITLE' => $this->title ? $this->title : " ",
+      'HEADER' => $this->header ? $this->header : " ",
+      'CONTENT' => $this->content ? $this->content : " ",
+      'PRE-HEADER' => $this->pre_header ? $this->pre_header : " ",
+      'SIDE-BAR' => $this->side_bar ? $this->side_bar : " ",
+      'BOTTOM' => $this->bottom ? $this->bottom : " ",
     );
   }
 }
