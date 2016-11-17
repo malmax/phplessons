@@ -10,69 +10,92 @@ require_once("../config.php");
 
 class Game {
   public $title, $price, $image, $shortText;
-  private $gameId, $allGames, $maxId;
+  private $gameId;
 
   function __construct($id = NULL) {
 
-    //загружаем все игры в массив $allGames
-    $this->load();
-
-
-    //если задан id - присваиваем текущему объекту свойства из $allGames
     if ($id != NULL) {
-      if (in_array($id, array_keys($this->allGames))) {
-        $this->title = $this->allGames[$id][1];
-        $this->price = $this->allGames[$id][2];
-        $this->image = $this->allGames[$id][3];
-        $this->shortText = $this->allGames[$id][4];
-        $this->gameId = $id;
-      }
-      else {
-        //итератор для следующей игры
-        $this->gameId = $this->maxId + 1;
+      //загружаем объект
+      if ($obj = $this->load($id)) {
+        $this->title = $obj->title;
+        $this->price = $obj->price;
+        $this->image = $obj->image;
+        $this->shortText = $obj->shortText;
+        $this->gameId = $obj->gameId;
       }
     }
     else {
-      //итератор для следующей игры
-      $this->gameId = $this->maxId + 1;
+      $this->gameId = $this->getMaxId();
     }
 
   }
 
-
-  private function load($gameId = NULL) {
-
-    //если уже были загружены
-    if(sizeof($this->allGames) > 0)
-      return $this->allGames;
-
-    /*
-     * загрузка данных о всех играх из файла
-     * формат файла csv
-     * gameId;title;price;image;shortText
-     */
-
-    if (!file_exists(DATA_DIR . '/games.csv')) {
-      $file = fopen(DATA_DIR . '/games.csv', 'w');
-      fwrite($file, " ");
-      fclose($file);
-    }
-
-    $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/games.csv')));
-    $array = explode("\n", $array);
-
-    $this->maxId = 0;
-    foreach ($array as $row) {
-      $temp = explode(";", $row);
-      $this->allGames[$temp[0]] = $temp;
-      if ($temp[0] > $this->maxId) {
-        $this->maxId = $temp[0];
+  //Хелпер для нахождения максимального итератора
+  private function getMaxId() {
+    $maxId = 0;
+    $allGames = self::_loadAllGamesToArray();
+    foreach ($allGames as $key => $value) {
+      if ($key > $maxId) {
+        $maxId = $key;
       }
     }
 
-    return $this->allGames;
+    return $maxId;
   }
 
+  //возвращает все игры из базы в виде массива
+  //array(gameId => array(title =>"..",...), и т.д.
+  private static function _loadAllGamesToArray($recache = FALSE) {
+
+    //кэшируем вызов чтения всех объектов
+    static $allGames = array();
+
+    if ((!sizeof($allGames)) || $recache) {
+      /*
+      * формат файла csv
+      * gameId;title;price;image;shortText
+      */
+
+      if (!file_exists(DATA_DIR . '/games.csv')) {
+        $file = fopen(DATA_DIR . '/games.csv', 'w');
+        fwrite($file, " ");
+        fclose($file);
+      }
+
+      $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/games.csv')));
+      $array = explode("\n", $array);
+
+      foreach ($array as $row) {
+        $temp = explode(";", $row);
+        $allGames[$temp[0]] = $temp;
+      }
+    }
+
+    return $allGames;
+  }
+
+
+  //возвращаем конкретный объект из базы
+  public function load($gameId) {
+
+    //получаем все объекты игра из базы
+    $allGames = self::_loadAllGamesToArray();
+
+    if (in_array($gameId, array_keys($allGames))) {
+      //возвращаем объект
+      $obj = new stdClass();
+      $obj->title = $allGames[$gameId][1];
+      $obj->price = $allGames[$gameId][2];
+      $obj->image = $allGames[$gameId][3];
+      $obj->shortText = $allGames[$gameId][4];
+      $obj->gameId = $allGames[$gameId][0];
+
+      return $obj;
+    }
+    else {
+      return FALSE;
+    }
+  }
 
   function save() {
     /*
@@ -91,25 +114,19 @@ class Game {
     $toStr = str_replace(array("\r\n", "\n"), "<br />", $toStr);
 
     //массив строк в конце запишем в файл games.csv
-    $toFile = [];
+    $toFile = array();
 
-    //получаем и превращаем в массив все строчки текущей базы
-    $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/games.csv')));
-    $array = explode("\n", $array);
-
-    //обходим все строчки в текущей базе, чтобы обновить или добавить текущий объект
-    foreach ($array as $row) {
-      $temp = explode(";", $row);
+    foreach (self::_loadAllGamesToArray() as $id => $temp) {
 
       //находим строчку с тем же gameId
-      if ($temp[0] == $this->gameId) {
+      if ($id === $this->gameId) {
         //если id игры равен $this->gameId - заменяем строчку на новую
         $toFile[] = $toStr;
         unset($toStr); //удаляем переменную, чтобы в дальнейшем понять, что данный объект был успешно записан
       }
       else {
         //если id игры не равен $this->gameId - оставляем строчку без изменений
-        $toFile[] = $row;
+        $toFile[] = implode(";", $temp);
       }
     }
     //если $toStr не была удалена - значит данного объекта не было в базе, добавляем в конец файла
@@ -120,20 +137,18 @@ class Game {
     //записываем
     file_put_contents(DATA_DIR . '/games.csv', implode("\n", $toFile));
 
+    //сбрасываем кэш
+    self::_loadAllGamesToArray(TRUE);
   }
 
 //выводим массив всех объектов
   static function loadAllGames() {
     $objs = [];
-    //получаем и превращаем в массив все строчки текущей базы
-    $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/games.csv')));
-    $array = explode("\n", $array);
 
     //обходим все строчки в базе и создаем по каждой строчке - объект Game
-    foreach ($array as $row) {
-      $temp = explode(";", $row);
+    foreach (self::_loadAllGamesToArray() as $id=>$arr) {
       //записываем каждый объект в массив
-      $objs[] = new Game($temp[0]);
+      $objs[] = new Game($id);
     }
 
     //возвращаем массив объектов

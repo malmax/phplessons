@@ -10,6 +10,7 @@
 require_once ("../config.php");
 require_once ("../lib/page.php");
 require_once ("../lib/game.php");
+require_once ("../lib/term.php");
 
 //Страница index
 
@@ -18,7 +19,7 @@ $index->title = 'Главная страница';
 $index->header = 'Новинки магазина';
 $index->content = 'Идет занятие';
 $index->pre_header = array('template'=>array('baneronindex.tpl.html'));
-$index->side_bar = array('template'=>array('sidebar.tpl.html'));
+$index->side_bar = array('function'=>'Term::getHierarchicalArray');
 echo $index->savePageToFile();
 
 // страница about
@@ -36,6 +37,38 @@ $index->header = 'Контактная информация';
 $index->content = array('template'=>array('contact.tpl.html','contactform.tpl.html','clear.tpl.html','map.tpl.html'));
 $index->pre_header = "";
 echo $index->savePageToFile();
+
+/* ТРЕМИНЫ */
+$terms = array(
+  array('title'=>'Жанр','id'=>1,'parent'=>0),
+    array('title'=>'Стрелялка','id'=>2,'parent'=>1),
+    array('title'=>'RPG','id'=>3,'parent'=>1),
+    array('title'=>'Спорт','id'=>4,'parent'=>1),
+    array('title'=>'Драки','id'=>5,'parent'=>1),
+    array('title'=>'Приключения','id'=>6,'parent'=>1),
+    array('title'=>'Экшен','id'=>7,'parent'=>1),
+    array('title'=>'Гонки','id'=>8,'parent'=>1),
+
+  array('title'=>'Особенности','id'=>9,'parent'=>0),
+    array('title'=>'новинка','id'=>10,'parent'=>9),
+    array('title'=>'распродажа','id'=>11,'parent'=>9),
+    array('title'=>'популярные','id'=>12,'parent'=>9),
+    array('title'=>'предзаказ','id'=>13,'parent'=>9),
+    array('title'=>'выбор редакции','id'=>14,'parent'=>9),
+);
+
+//обнуляем файл с терминами
+file_put_contents(DATA_DIR . '/terms.csv',"");
+
+foreach($terms as $value) {
+  $term = new Term();
+  $term->title = $value['title'];
+  $term->parent = $value['parent'];
+  $term->termId = $value['id'];
+  $term->save();
+}
+
+
 
 
 //обнуляем файл с играми

@@ -34,6 +34,7 @@ function render($file, $variables = array()) {
 
       if ($value != NULL) {
         switch ($key) {
+          //если есть ключ menu то берем массив-значение и создаем ссылки
           case 'menu':
             if (is_array($value)) {
               $out = "<ul>";
@@ -49,8 +50,11 @@ function render($file, $variables = array()) {
             break;
 
           default:
+            //если значение - массив
             if (is_array($value)) {
+              //проверяем есть ли значение template
               if (isset($value['template'])) {
+                //если существует такой файл то просто его выводим
                 if (file_exists(TPL_DIR . "/" . $value['template'][0])) {
                   $out = "";
                   for ($i = 0; $i < count($value['template']); $i++) {
@@ -60,6 +64,12 @@ function render($file, $variables = array()) {
                 }
                 else {
                   $value = "Файл " . TPL_DIR . "/" . $value['template'][0] . " не найден.";
+                }
+              }
+              //если есть значение function
+              elseif (isset($value['function'])) {
+                if(function_exists($value['function'])) {
+                  $value = call_user_func($value['function']);
                 }
               }
               else {

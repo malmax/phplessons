@@ -10,38 +10,34 @@ require_once("../config.php");
 
 class Game {
   public $title, $price, $image, $shortText;
-  private $gameId, $allGames, $maxId;
+  private $gameId, $maxId;
+  private static $allGames = array(); //кэшируем вызов чтения всех объектов
 
   function __construct($id = NULL) {
 
-    $this->load();
-
     if ($id != NULL) {
-      if (in_array($id, array_keys($this->allGames))) {
-        $this->title = $this->allGames[$id][1];
-        $this->price = $this->allGames[$id][2];
-        $this->image = $this->allGames[$id][3];
-        $this->shortText = $this->allGames[$id][4];
-        $this->gameId = $id;
+      //загружаем объект
+      if ($obj = $this->load($id)) {
+        $this->title = $obj->title;
+        $this->price = $obj->price;
+        $this->image = $obj->image;
+        $this->shortText = $obj->shortText;
+        $this->gameId = $obj->gameId;
       }
-      else {
-        $this->gameId = $this->maxId + 1;
-      }
-
     }
     else {
-      $this->gameId = $this->maxId + 1;
+      $this->gameId = $this->getMaxId();
     }
-
   }
 
-
-  private function load($gameId = NULL) {
-
+  //возвращает все игры из базы в виде массива
+  //array(gameId => array(title =>"..",...), и т.д.
+  private static function _loadAllGamesToArray() {
     /*
      * формат файла csv
      * gameId;title;price;image;shortText
      */
+    $allGames = array();
 
     if (!file_exists(DATA_DIR . '/games.csv')) {
       $file = fopen(DATA_DIR . '/games.csv', 'w');
@@ -52,16 +48,21 @@ class Game {
     $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/games.csv')));
     $array = explode("\n", $array);
 
-    $this->maxId = 0;
     foreach ($array as $row) {
       $temp = explode(";", $row);
-      $this->allGames[$temp[0]] = $temp;
-      if ($temp[0] > $this->maxId) {
-        $this->maxId = $temp[0];
-      }
+      $allGames[$temp[0]] = $temp;
     }
 
+    return $allGames;
+  }
 
+  //возвращаем конкретный объект из базы
+  private function load($gameId = NULL) {
+
+    //проверяем кэш
+    if(!sizeof($this->allGames)) {
+      $this->allGames = self::_loadAllGamesToArray();
+    }
   }
 
 
@@ -82,18 +83,14 @@ class Game {
     //его будем записывать в файл games.csv
     $toFile = [];
 
-    $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/games.csv')));
-    $array = explode("\n", $array);
+    foreach (self::_loadAllGamesToArray() as $id=>$temp) {
 
-    foreach ($array as $row) {
-      $temp = explode(";", $row);
-
-      if ($temp[0] == $this->gameId) { //находим строчку с тем же gameId
+      if ($id === $this->gameId) { //находим строчку с тем же gameId
         $toFile[] = $toStr;
         unset($toStr);
       }
       else {
-        $toFile[] = $row;
+        $toFile[] = implode(";",$temp);
       }
     }
     //если новая строчка
