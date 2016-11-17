@@ -1,0 +1,325 @@
+/*меню*/
+
+.primary-menu li {
+    display: inline-block;
+    padding: 6px 10px 0 10px;
+    margin: 0;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid gray;
+    text-align: center;
+    font-family: Consolas;
+    font-size: 18px;
+}
+
+.primary-menu ul {
+    margin: 5px 0;
+    padding: 0;
+}
+
+.primary-menu a:hover {
+    color: #78BED1;
+}
+
+.secondary-menu li {
+    display: inline-block;
+    padding-right: 10px;
+    height: 20px;
+}
+
+.secondary-menu ul {
+    margin: 0 0 5px 0;
+    padding: 0;
+    text-align: right;
+}
+
+
+/*Страница с описанием продукта*/
+
+body.product-display h1, body.product-display h2, body.product-display h3, body.product-display h4, body.product-display h5, body.product-display h6 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #eaeaea;
+}
+
+body.product-display .shortdescription {
+    color: #707070;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+body.product-display .fulldesc {
+    color: #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+body.product-display .techs li {
+    color: #7e7e7e;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: Consolas;
+    list-style-type: upper-latin;
+}
+
+body.product-display .techs ul li {
+    font-weight: bold;
+    list-style-type: upper-roman;
+}
+
+body.product-display .cover img {
+    max-width: 280px;
+    border: 1px solid red;
+}
+
+body.product-display .cover img:hover {
+    border: 1px solid transparent;
+}
+
+body.product-display .fulldesc p::first-letter {
+    font-size: 24px;
+    color: #AB4E41;
+}
+
+
+/* таблицы */
+
+table tr:first-child {
+    height: 50px;
+}
+
+
+/*Страница с контактными данными*/
+
+.contactus form {
+    text-align: right;
+}
+
+.contactus input[type=text], .contactus textarea {
+    width: 300px;
+    color: brown;
+    font-size: 16px;
+}
+
+.contactus input[type=text] {
+    text-transform: capitalize;
+    height: 30px;
+}
+
+.contactus input[name=email]:focus {
+    color: #567979;
+    border-color: #567979;
+}
+
+
+/*общие свойства*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background: url('img/debut_light.png') #f8f8f8;
+    /*background-color:  #f8f8f8;*/
+}
+
+a:visited, a {
+    color: #567979;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.product {
+    text-align: center;
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.21);
+    border-radius: 5%;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 215px;
+}
+
+.product img {
+    width: 180px;
+}
+
+.catalog sidebar {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.21);
+    border-radius: 1%;
+    display: block;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 215px;
+}
+
+.catalog sidebar h3 {
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.catalog sidebar li {
+    list-style-type: none;
+    line-height: 1.3;
+}
+
+section.row {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+/*стили для блока .header*/
+
+header .logo img {
+    max-width: 350px;
+    padding-top: 10px;
+}
+
+header .logo {
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+header .search-block input[type=text] {
+    width: 400px;
+    height: 30px;
+    font-size: 16px;
+}
+
+header .search-block input[type=submit] {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.container {
+    margin: 0 auto;
+    box-shadow: 0 0 3px gray;
+    background-color: white;
+    width: 910px;
+    /*box-sizing: border-box;
+    padding: 0 5px;*/
+}
+
+.buybutton input[type=button] {
+    cursor: pointer;
+    padding: 3px 10px;
+    margin-left: 15px;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 1.1rem;
+}
+
+.buybutton input[type=button]:hover {
+    color: #567979;
+    border: 1px solid #567979;
+}
+
+.buybutton input[type=button]:active {
+    background-color: #567979;
+    color: white;
+}
+
+.container>header {
+    height: 110px;
+    background: url("img/subtle_dots.png");
+    padding: 0 5px;
+}
+
+.container>header li {
+    background-color: white;
+}
+
+.container>hr {
+    margin: 0;
+    padding: 0;
+}
+
+.container>section {
+    margin: 10px 0;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+
+/*.container h2 {
+  padding: 0 5px;
+}*/
+
+.container>footer {
+    height: 50px;
+    background: url("img/subtle_dots.png");
+    padding: 15px 15px 0 0;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.container-4 {
+    width: 300px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.container-4 img {
+    max-width: 300px;
+}
+
+.container-12 {
+    width: 900px;
+}
+
+.container-6 {
+    width: 450px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.container-9 {
+    width: 665px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.container-9 img {
+    max-width: 650px;
+}
+
+.container-3 {
+    width: 225px;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+.container-3 img {
+    max-width: 225px;
+}
+
+.clear {
+    clear: both;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/** {
+  padding: 0;
+  margin: 0;
+}*/
