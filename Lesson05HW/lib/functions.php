@@ -68,9 +68,13 @@ function render($file, $variables = array()) {
               }
               //если есть значение function
               elseif (isset($value['function'])) {
-                if(function_exists($value['function'])) {
+                //проверяем есть ли такой метод
+                if(method_exists($value['function'][0],$value['function'][1])) {
+                  //Вполняем метод из базы
                   $value = call_user_func($value['function']);
                 }
+                else
+                  $value = "Функция ".print_r($value['function'],true)." не найдена";
               }
               else {
                 $value = "Неизвестный массив " . print_r($value, TRUE);

@@ -19,7 +19,7 @@ $index->title = 'Главная страница';
 $index->header = 'Новинки магазина';
 $index->content = 'Идет занятие';
 $index->pre_header = array('template'=>array('baneronindex.tpl.html'));
-$index->side_bar = array('function'=>'Term::getHierarchicalArray');
+$index->side_bar = array('function'=>array('Term','getHierarchicalSideBar'));
 echo $index->savePageToFile();
 
 // страница about
@@ -40,7 +40,7 @@ echo $index->savePageToFile();
 
 /* ТРЕМИНЫ */
 $terms = array(
-  array('title'=>'Жанр','id'=>1,'parent'=>0),
+  array('title'=>'Жанр игр','id'=>1,'parent'=>0),
     array('title'=>'Стрелялка','id'=>2,'parent'=>1),
     array('title'=>'RPG','id'=>3,'parent'=>1),
     array('title'=>'Спорт','id'=>4,'parent'=>1),

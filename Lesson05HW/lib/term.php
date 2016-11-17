@@ -75,12 +75,18 @@ class term {
     return $allTerms;
   }
 
-  public static function getHierarchicalArray() {
+  public static function getHierarchicalSideBar() {
     $allTerms = self::_loadAllTermsToArray();
-    $newArray = array();
+    $out[] = "<sidebar>";
     foreach($allTerms as $value) {
-      $newArray[$value['parent']][$value['title']] = new Term($value['termId']);
+      //если корень
+      if(!$value[2]) {
+        $out[] = "<h3>".$value[1]."</h3> <ul>";
+      }
+      $newArray[$value[2]][$value[1]] = new Term($value[0]);
     }
+
+    $out[] = "</sidebar>";
     return(print_r($newArray,true));
  }
 

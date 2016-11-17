@@ -4,6 +4,8 @@ require_once('../config.php');
 require_once (LIB_DIR."/page.php");
 // класс про игры
 require_once (LIB_DIR."/game.php");
+// класс про категории
+require_once (LIB_DIR."/term.php");
 
 $vars = array(
   'index' => array_merge(Page::loadPageFromFile('index')->returnArray(), array(
