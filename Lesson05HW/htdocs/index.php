@@ -7,6 +7,11 @@ require_once (LIB_DIR."/game.php");
 // класс про категории
 require_once (LIB_DIR."/term.php");
 
+//Если есть q, то разбиваем ее на аргументы
+if (isset($_GET['q'])) {
+  list($arg1,$arg2,$arg4) = explode("/",$_GET['q']);
+}
+
 $vars = array(
   'index' => array_merge(Page::loadPageFromFile('index')->returnArray(), array(
     'SOME-ATR-NOT-IN-CLASS' => 'some text',
@@ -30,30 +35,43 @@ $vars = array(
       'SIDE-BAR' => ' ',
       'BOTTOM' => ' ',
     ),
-  'catalog' => array(
+
+  'category_id' => array(
     'template' => 'index',
     'TITLE' => 'Каталог',
     'HEADER' => 'Каталог магазина',
     'CONTENT' => implode("\n",array_map(function($item) {
       return "<div class=\"container-3\">".$item."</div>\n";
-    },Game::loadAllGames())),
+    },Term::showProductFromTerm((int)$arg2))),
     'PRE-HEADER' => ' ',
-    'SIDE-BAR' => ' ',
+    'SIDE-BAR' => array('function'=>array('Term','getHierarchicalSideBar')),
     'BOTTOM' => ' ',
 ),
 );
 
-//echo render('index');
-if (isset($_GET['q']) && in_array($_GET['q'], array_keys($vars))) {
-  $page_r = $_GET['q'];
-  //свойства даннлой страницы
-  $currentVars = $vars[$page_r];
-  //если в свойствах задан template - используем его
-  if(isset($currentVars['template']))
-    $page_r = $currentVars['template'];
+//по-умолчанию
+$page_r = 'index';
+
+if (isset($arg1)) {
+
+  if(in_array($arg1, array_keys($vars))) {
+    $page_r = $arg1;
+    //свойства даннлой страницы
+    $currentVars = $vars[$page_r];
+    //если в свойствах задан template - используем его
+    if (isset($currentVars['template'])) {
+      $page_r = $currentVars['template'];
+    }
+  }
+  else {
+    header("HTTP/1.0 404 Not Found");
+    header("HTTP/1.1 404 Not Found");
+    header("Status: 404 Not Found");
+    die();
+  }
 }
 else {
-  $page_r = 'index';
+
   $currentVars = $vars[$page_r];
 }
 

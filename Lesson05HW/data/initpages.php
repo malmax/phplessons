@@ -59,6 +59,7 @@ $terms = array(
 
 //обнуляем файл с терминами
 file_put_contents(DATA_DIR . '/terms.csv',"");
+file_put_contents(DATA_DIR . '/termdata.csv',"");
 
 foreach($terms as $value) {
   $term = new Term();
@@ -77,6 +78,7 @@ $game->price = 3990;
 $game->image = "./i/fifa-17-ps4_ps-4_cover.png";
 $game->shortText = "FIFA 17, подарит игрокам по-настоящему реалистичную игру. В игровом процессе произошли большие изменения, теперь футболисты еще более реалистично двигаются, мыслят, физически контактируют с игроками соперника, исполняют стандартные положения и используют новые приемы во время атакующих действий, благодаря чему вы сможете контролировать каждый момент на футбольном поле.";
 $game->save();
+Term::addTermToProduct($game->gameId,array(4,10,12));
 
 // игра 2
 $game = new Game();
@@ -85,6 +87,7 @@ $game->price = 3490;
 $game->image = "./i/battlefield-1-ps4_ps-4_cover.png";
 $game->shortText = "Станьте свидетелем рассвета мировых войн в игре Battlefield 1. Откройте новый мир в захватывающей кампании или присоединяйтесь к масштабным многопользовательским битвам с поддержкой до 64 игроков.";
 $game->save();
+Term::addTermToProduct($game->gameId,array(2,10,12,14));
 
 // игра 3
 $game = new Game();
@@ -93,6 +96,7 @@ $game->price = 2790;
 $game->image = "./i/elder-scrolls-v-skyrim-special-edition-ps4_ps-4_cover.png";
 $game->shortText = "Самая популярная фэнтезийная RPG в истории Ремастеринг в потрясающем HD качестве для Xbox One и Playstation 4 Обладатель более 200 наград \"Игра года\" Включает в себя всю мощь модов ПК для консолей Также включает в себя все DLC (Dawnguard, Heathfire, Dragonborn)";
 $game->save();
+Term::addTermToProduct($game->gameId,array(3,13,14));
 
 // игра 4
 $game = new Game();
@@ -101,6 +105,7 @@ $game->price = 1990;
 $game->image = "./i/uncharted-4-thiefs-end-ps4_ps-4_cover.png";
 $game->shortText = "Серия Uncharted знаменита своим кинематографическим подходом, и «Путь вора» продолжает эту традицию, обещая стать самым впечатляющим приключением на PlayStation 4. В арсенале Натана Дрейка появится веревка, крюк-кошка и прочая экипировка для скалолазания. Кроме того, впервые в истории серии Uncharted игроки смогут свободно управлять различными средствами передвижения. На новый уровень качества выйдет знаменитый мультиплеер Uncharted.";
 $game->save();
+Term::addTermToProduct($game->gameId,array(6,11,12));
 
 // игра 5
 $game = new Game();
@@ -109,6 +114,7 @@ $game->price = 1990;
 $game->image = "./i/mafia-3-ps4_ps-4_cover.png";
 $game->shortText = "Бонус за предзаказ: Набор «Семейный откат»: 3 эксклюзивных ствола и 3 автомобиля.";
 $game->save();
+Term::addTermToProduct($game->gameId,array(6,7,10,14));
 
 // игра 6
 $game = new Game();
@@ -117,3 +123,4 @@ $game->price = 2990;
 $game->image = "./i/3-witcher-3-wild-hunt-goty-ps4_ps-4_cover.png";
 $game->shortText = "У Меча Предназначения два острия. Одно из них – ты.";
 $game->save();
+Term::addTermToProduct($game->gameId,array(3,11,12));

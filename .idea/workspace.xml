@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="71bf0284-296d-4b29-8594-bc7a8682950f" name="Default" comment="complete task 1">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/games.csv" afterPath="$PROJECT_DIR$/Lesson05HW/data/games.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/index.dat" afterPath="$PROJECT_DIR$/Lesson05HW/data/index.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/initpages.php" afterPath="$PROJECT_DIR$/Lesson05HW/data/initpages.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/terms.csv" afterPath="$PROJECT_DIR$/Lesson05HW/data/terms.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/lib/game.php" afterPath="$PROJECT_DIR$/Lesson05HW/lib/game.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/lib/functions.php" afterPath="$PROJECT_DIR$/Lesson05HW/lib/functions.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/lib/term.php" afterPath="$PROJECT_DIR$/Lesson05HW/lib/term.php" />
     </list>
     <ignored path="tyre1.iws" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="game.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="428">
+              <caret line="153" column="28" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="28" />
               <folding>
                 <marker date="1479476180985" expanded="true" signature="4159:4891" ph="..." />
                 <marker date="1479476180985" expanded="true" signature="4196:4569" ph="..." />
@@ -57,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="term.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="term.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/term.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1021">
-              <caret line="166" column="72" selection-start-line="166" selection-start-column="72" selection-end-line="166" selection-end-column="72" />
+            <state relative-caret-position="674">
+              <caret line="248" column="83" selection-start-line="248" selection-start-column="83" selection-end-line="248" selection-end-column="83" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="terms.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lesson05HW/data/terms.csv">
+      <file leaf-file-name="termdata.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson05HW/data/termdata.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -80,8 +77,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/htdocs/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="867">
+              <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -90,18 +87,18 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+            <state relative-caret-position="776">
+              <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initpages.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="initpages.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/data/initpages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="714">
+              <caret line="98" column="51" selection-start-line="98" selection-start-column="51" selection-end-line="98" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -145,10 +142,12 @@
         <option value="$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html" />
         <option value="$PROJECT_DIR$/Lesson04HW/data/initpages.php" />
         <option value="$PROJECT_DIR$/Lesson04HW/htdocs/index.php" />
-        <option value="$PROJECT_DIR$/Lesson05HW/data/initpages.php" />
-        <option value="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" />
         <option value="$PROJECT_DIR$/Lesson05HW/lib/game.php" />
+        <option value="$PROJECT_DIR$/Lesson05HW/data/termdata.csv" />
+        <option value="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" />
+        <option value="$PROJECT_DIR$/Lesson05HW/lib/functions.php" />
         <option value="$PROJECT_DIR$/Lesson05HW/lib/term.php" />
+        <option value="$PROJECT_DIR$/Lesson05HW/data/initpages.php" />
       </list>
     </option>
   </component>
@@ -165,8 +164,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="110" />
-    <option name="width" value="1807" />
+    <option name="x" value="896" />
+    <option name="width" value="1021" />
     <option name="height" value="1167" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -210,8 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane />
       </pane>
@@ -360,7 +359,7 @@
       <workItem from="1479199026909" duration="6515000" />
       <workItem from="1479391225175" duration="786000" />
       <workItem from="1479450502993" duration="3035000" />
-      <workItem from="1479475178401" duration="1320000" />
+      <workItem from="1479475178401" duration="6378000" />
     </task>
     <task id="LOCAL-00001" summary="complete task 1">
       <created>1478093615503</created>
@@ -380,24 +379,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38688000" />
+    <option name="totallyTimeSpent" value="43746000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="110" y="0" width="1807" height="1167" extended-state="0" />
+    <frame x="896" y="0" width="1021" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20619947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20606755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2558672" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923368" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -428,13 +427,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lesson03HW/task2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson03HW/task4.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -722,26 +714,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson05HW/data/games.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson05HW/htdocs/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -753,18 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson05HW/data/initpages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="428">
+          <caret line="153" column="28" selection-start-line="153" selection-start-column="20" selection-end-line="153" selection-end-column="28" />
           <folding>
             <marker date="1479476180985" expanded="true" signature="4159:4891" ph="..." />
             <marker date="1479476180985" expanded="true" signature="4196:4569" ph="..." />
@@ -775,10 +743,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="106" column="29" selection-start-line="106" selection-start-column="29" selection-end-line="106" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/htdocs/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/term.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1021">
-          <caret line="166" column="72" selection-start-line="166" selection-start-column="72" selection-end-line="166" selection-end-column="72" />
+        <state relative-caret-position="674">
+          <caret line="248" column="83" selection-start-line="248" selection-start-column="83" selection-end-line="248" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/data/termdata.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/data/initpages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="98" column="51" selection-start-line="98" selection-start-column="51" selection-end-line="98" selection-end-column="51" />
           <folding />
         </state>
       </provider>

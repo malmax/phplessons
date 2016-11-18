@@ -21,7 +21,7 @@ class term {
         $this->parent = $obj->parent;
         $this->termId = $obj->termId;
 
-        return true;
+        return TRUE;
       }
     }
 
@@ -41,7 +41,7 @@ class term {
       }
     }
 
-    return $maxId+1;
+    return $maxId + 1;
   }
 
   //возвращает все термины из базы в виде массива
@@ -78,22 +78,23 @@ class term {
   public static function getHierarchicalSideBar() {
     $allTerms = self::_loadAllTermsToArray();
     $out[] = "<sidebar>";
-    foreach($allTerms as $value) {
+    foreach ($allTerms as $value) {
       //если корень
-      if(!$value[2]) {
-        if(sizeof($out > 1))
-          $out[]= "</ul>";
-        $out[] = "<h3>".$value[1]."</h3> <ul>";
+      if (!$value[2]) {
+        if (sizeof($out > 1)) {
+          $out[] = "</ul>";
+        }
+        $out[] = "<h3>" . $value[1] . "</h3> <ul>";
       }
       else {
         $term = new Term($value[0]);
-        $out[]="<li>".$term."</li>";
+        $out[] = "<li>" . $term . "</li>";
       }
     }
 
     $out[] = "</ul></sidebar>";
-    return implode("\n",$out);
- }
+    return implode("\n", $out);
+  }
 
   //возвращаем конкретный объект из базы
   public function load($termId) {
@@ -115,42 +116,82 @@ class term {
     }
   }
 
-  public static function addTermToProduct($productId,$termId) {
+  public static function addTermToProduct($productId, $termId, $debug = FALSE) {
     $terms = array(); //можно передать сразу массив ключей
     //проверка значений
-    if($obj=new Game($productId)) {
-      if(!is_array($termId)) {
+    if ($obj = new Game($productId)) {
+      if (!is_array($termId)) {
         $termId = array($termId);
       }
       //обходим все термины переданные как второй параметр
-      foreach($termId as $t) {
-        if($temp = new Term($t)) { //проверяем на существование термина и загружаем его
+      foreach ($termId as $t) {
+        if ($temp = new Term($t)) { //проверяем на существование термина и загружаем его
           $terms[] = $temp; //добавляем объект-термин в массив
         }
         else {
-          return false;
+          return FALSE;
         }
       }
     }
     else {
-      return false;
+      return FALSE;
     }
 
     //обходим все термины, которые надо добавить в цикле
     $existingTerms = self::loadTermDataArray();
-    foreach($terms as $term) {
-      if(in_array($obj->gameId,$existingTerms[$term->$termId])) {
+
+    if($debug)
+      die(print_r($existingTerms,true));
+
+    foreach ($terms as $term) {
+      if (in_array($obj->gameId, $existingTerms[$term->termId])) {
         //уже есть данный термин у продукта
         continue;
       }
-      $existingTerms[$term->$termId][] = $obj->gameId;
+      $existingTerms[$term->termId][] = $obj->gameId;
     }
 
-    self::saveTermDataFromArray($existingTerms);
+
+
+    self::saveTermDataFromArray($existingTerms,$debug);
 
   }
 
-  private static function saveTermDataFromArray($array) {
+  //вывод всех продуктов для указанного термина
+  public static function showProductFromTerm($termId) {
+
+    $out = array();
+
+
+    $allTermData = self::loadTermDataArray();
+
+    if (sizeof($allTermData[$termId])) {
+      foreach ($allTermData[$termId] as $productId) {
+        if ($obj = new Game($productId)) {
+          $out[] = $obj;
+        }
+      }
+    }
+    //если termId = 0 - выводим все продукты
+    elseif (!$termId) {
+      $tempArr = array();
+      foreach ($allTermData as $k => $arr) {
+        $tempArr = array_merge($arr, $tempArr);
+      }
+      //убираем дубликаты
+      $tempArr = array_unique($tempArr);
+      foreach ($tempArr as $productId) {
+        if ($obj = new Game($productId)) {
+          $out[] = $obj;
+        }
+      }
+    }
+
+    return $out;
+  }
+
+
+  private static function saveTermDataFromArray($array,$debug=false) {
     /*
       * формат файла csv
       * termId;productId
@@ -162,16 +203,29 @@ class term {
       fclose($file);
     }
 
-    if(sizeof($array)) {
+    $out = array();
+    //данные приходят в формате termId => array(productId1, productId2, ...),...
+    if (sizeof($array)) {
+      foreach ($array as $termId => $arr) {
+        foreach ($arr as $productId) {
+          $out[] = implode(';', array($termId, $productId));
+        }
+      }
+      if ($debug) {
+        die(print_r($out));
+      }
       //записываем
-      file_put_contents(DATA_DIR . '/termdata.csv', implode("\n", $array));
+      sort($out);
+      file_put_contents(DATA_DIR . '/termdata.csv', implode("\n", $out));
+      //сброс кэша
+      self::loadTermDataArray(TRUE);
     }
 
   }
 
   //возвращает все привязанные термины из базы в виде массива
   //array(termId => array(productId1, productId2,...), и т.д.
-  private static function loadTermDataArray($recache = false) {
+  private static function loadTermDataArray($recache = FALSE) {
     static $termData = array();
 
     if ((!sizeof($termData)) || $recache) {
@@ -182,17 +236,22 @@ class term {
 
       if (!file_exists(DATA_DIR . '/termdata.csv')) {
         $file = fopen(DATA_DIR . '/termdata.csv', 'w');
-        fwrite($file, " ");
+        fwrite($file, "");
         fclose($file);
       }
 
-      $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/termdata.csv')));
-      $array = explode("\n", $array);
+      $array = trim(file_get_contents(DATA_DIR . '/termdata.csv'));
+      $array = str_replace("\r", "", $array);
+      $array = explode("\n", trim($array));
 
       foreach ($array as $row) {
         $temp = explode(";", $row);
-        $termData[$temp[0]][] = $temp[1];
+        //без !in_array($temp[1],$termData[$temp[0]] задваивались некоторые термины
+        if ($temp[0]>0 && !in_array($temp[1],$termData[$temp[0]])) {
+          $termData[$temp[0]][] = $temp[1];
+        }
       }
+
     }
 
     return $termData;
@@ -207,7 +266,7 @@ class term {
     $toStr = implode(";", array(
       $this->termId,
       str_replace(";", "", $this->title),
-      (int)$this->parent,
+      (int) $this->parent,
     ));
     //строчка для записи в файл. все объекты должны быть в одну строчку. поэтому удаляем переносы строк
     $toStr = str_replace(array("\r\n", "\n"), "<br />", $toStr);
@@ -245,7 +304,7 @@ class term {
     $objs = [];
 
     //обходим все строчки в базе и создаем по каждой строчке - объект Term
-    foreach (self::_loadAllTermsToArray() as $id=>$arr) {
+    foreach (self::_loadAllTermsToArray() as $id => $arr) {
       //записываем каждый объект в массив
       $objs[] = new Term($id);
     }
@@ -256,7 +315,7 @@ class term {
 
   //текстовое представление объекта
   function __toString() {
-    return "<a href=./index.php?q=category_id/".$this->termId.">".$this->title."</a>\n";
+    return "<a href=./index.php?q=category_id/" . $this->termId . ">" . $this->title . "</a>\n";
 
   }
 

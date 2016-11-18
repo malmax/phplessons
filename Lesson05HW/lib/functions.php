@@ -104,7 +104,7 @@ function get_menu() {
     'Главная' => 'index',
     'О магазине' => 'about',
     'Новости' => 'news',
-    'Каталог' => 'catalog'
+    'Каталог' => 'category_id'
   );
 }
 
