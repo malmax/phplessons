@@ -57,7 +57,7 @@ else {
   $currentVars = $vars[$page_r];
 }
 
-
+//print_r($currentVars);
 echo render($page_r, $currentVars);
 
 ?>

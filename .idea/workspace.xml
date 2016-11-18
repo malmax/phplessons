@@ -2,34 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71bf0284-296d-4b29-8594-bc7a8682950f" name="Default" comment="complete task 1">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/3-witcher-3-wild-hunt-goty-ps4_ps-4_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/Logomakr_1d6a6R.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/battlefield-1-ps4_ps-4_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/cod_iw_pre_688x400.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/debut_light.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/elder-scrolls-v-skyrim-special-edition-ps4_ps-4_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/fifa-17-ps4_ps-4_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/mafia-3-ps4_ps-4_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/subtle_dots.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/i/uncharted-4-thiefs-end-ps4_ps-4_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/config.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/data/about.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/data/games.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/data/index.dat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/data/initpages.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/lib/functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/lib/game.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/lib/page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/baneronindex.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/clear.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/contact.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/contactform.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/map.tpl.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lesson05HW/templates/sidebar.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/games.csv" afterPath="$PROJECT_DIR$/Lesson05HW/data/games.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/index.dat" afterPath="$PROJECT_DIR$/Lesson05HW/data/index.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/initpages.php" afterPath="$PROJECT_DIR$/Lesson05HW/data/initpages.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/data/terms.csv" afterPath="$PROJECT_DIR$/Lesson05HW/data/terms.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" afterPath="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/lib/game.php" afterPath="$PROJECT_DIR$/Lesson05HW/lib/game.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lesson05HW/lib/term.php" afterPath="$PROJECT_DIR$/Lesson05HW/lib/term.php" />
     </list>
     <ignored path="tyre1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +30,7 @@
     <favorites_list name="tyre1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="about.dat" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/data/about.dat">
           <provider selected="true" editor-type-id="text-editor">
@@ -61,18 +41,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/game.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+            <state relative-caret-position="179">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding>
-                <marker date="1479391993460" expanded="true" signature="3939:4671" ph="..." />
-                <marker date="1479391993460" expanded="true" signature="3976:4349" ph="..." />
-                <marker date="1479391993460" expanded="true" signature="4014:4127" ph="..." />
-                <marker date="1479391993460" expanded="true" signature="4165:4311" ph="..." />
-                <marker date="1479391993460" expanded="true" signature="4500:4635" ph="..." />
+                <marker date="1479476180985" expanded="true" signature="4159:4891" ph="..." />
+                <marker date="1479476180985" expanded="true" signature="4196:4569" ph="..." />
+                <marker date="1479476180985" expanded="true" signature="4234:4347" ph="..." />
+                <marker date="1479476180985" expanded="true" signature="4385:4531" ph="..." />
+                <marker date="1479476180985" expanded="true" signature="4720:4855" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="term.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/term.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1021">
+              <caret line="166" column="72" selection-start-line="166" selection-start-column="72" selection-end-line="166" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="terms.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson05HW/data/terms.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson05HW/htdocs/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1037">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="initpages.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Lesson05HW/data/initpages.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +145,10 @@
         <option value="$PROJECT_DIR$/Lesson04HW/templates/contactform.tpl.html" />
         <option value="$PROJECT_DIR$/Lesson04HW/data/initpages.php" />
         <option value="$PROJECT_DIR$/Lesson04HW/htdocs/index.php" />
+        <option value="$PROJECT_DIR$/Lesson05HW/data/initpages.php" />
+        <option value="$PROJECT_DIR$/Lesson05HW/htdocs/index.php" />
         <option value="$PROJECT_DIR$/Lesson05HW/lib/game.php" />
+        <option value="$PROJECT_DIR$/Lesson05HW/lib/term.php" />
       </list>
     </option>
   </component>
@@ -132,8 +165,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="417" />
-    <option name="width" value="1500" />
+    <option name="x" value="110" />
+    <option name="width" value="1807" />
     <option name="height" value="1167" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -177,77 +210,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson05HW" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson05HW" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lesson05HW" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tyre1" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
     </panes>
   </component>
@@ -393,6 +359,8 @@
       <workItem from="1479115889121" duration="12697000" />
       <workItem from="1479199026909" duration="6515000" />
       <workItem from="1479391225175" duration="786000" />
+      <workItem from="1479450502993" duration="3035000" />
+      <workItem from="1479475178401" duration="1320000" />
     </task>
     <task id="LOCAL-00001" summary="complete task 1">
       <created>1478093615503</created>
@@ -412,18 +380,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34333000" />
+    <option name="totallyTimeSpent" value="38688000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="417" y="0" width="1500" height="1167" extended-state="0" />
-    <editor active="false" />
+    <frame x="110" y="0" width="1807" height="1167" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20619947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20619947" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923368" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -460,52 +428,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/htdocs/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson04HW/htdocs/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson01HW/task1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lesson03HW/task1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="1" selection-start-line="49" selection-start-column="0" selection-end-line="64" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson03HW/task2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -678,7 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="15" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,9 +674,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,13 +681,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="105" column="3" selection-start-line="105" selection-start-column="3" selection-end-line="105" selection-end-column="3" />
-          <folding>
-            <marker date="1479199036271" expanded="true" signature="2700:3432" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="2737:3110" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="2775:2888" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="2926:3072" ph="..." />
-            <marker date="1479199036271" expanded="true" signature="3261:3396" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,17 +722,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/data/games.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/htdocs/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/data/terms.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/data/initpages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/game.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="142" column="35" selection-start-line="142" selection-start-column="35" selection-end-line="142" selection-end-column="35" />
+        <state relative-caret-position="179">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
-            <marker date="1479391993460" expanded="true" signature="3939:4671" ph="..." />
-            <marker date="1479391993460" expanded="true" signature="3976:4349" ph="..." />
-            <marker date="1479391993460" expanded="true" signature="4014:4127" ph="..." />
-            <marker date="1479391993460" expanded="true" signature="4165:4311" ph="..." />
-            <marker date="1479391993460" expanded="true" signature="4500:4635" ph="..." />
+            <marker date="1479476180985" expanded="true" signature="4159:4891" ph="..." />
+            <marker date="1479476180985" expanded="true" signature="4196:4569" ph="..." />
+            <marker date="1479476180985" expanded="true" signature="4234:4347" ph="..." />
+            <marker date="1479476180985" expanded="true" signature="4385:4531" ph="..." />
+            <marker date="1479476180985" expanded="true" signature="4720:4855" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lesson05HW/lib/term.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1021">
+          <caret line="166" column="72" selection-start-line="166" selection-start-column="72" selection-end-line="166" selection-end-column="72" />
+          <folding />
         </state>
       </provider>
     </entry>

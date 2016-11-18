@@ -10,7 +10,7 @@ require_once("../config.php");
 
 class Game {
   public $title, $price, $image, $shortText;
-  private $gameId;
+  public $gameId;
 
   function __construct($id = NULL) {
 
@@ -22,6 +22,9 @@ class Game {
         $this->image = $obj->image;
         $this->shortText = $obj->shortText;
         $this->gameId = $obj->gameId;
+      }
+      else {
+        return FALSE; //если id нет - возвращаем false
       }
     }
     else {
@@ -40,7 +43,7 @@ class Game {
       }
     }
 
-    return $maxId;
+    return $maxId + 1;
   }
 
   //возвращает все игры из базы в виде массива
@@ -146,7 +149,7 @@ class Game {
     $objs = [];
 
     //обходим все строчки в базе и создаем по каждой строчке - объект Game
-    foreach (self::_loadAllGamesToArray() as $id=>$arr) {
+    foreach (self::_loadAllGamesToArray() as $id => $arr) {
       //записываем каждый объект в массив
       $objs[] = new Game($id);
     }

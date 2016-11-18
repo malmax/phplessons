@@ -41,7 +41,7 @@ class term {
       }
     }
 
-    return $maxId;
+    return $maxId+1;
   }
 
   //возвращает все термины из базы в виде массива
@@ -81,13 +81,18 @@ class term {
     foreach($allTerms as $value) {
       //если корень
       if(!$value[2]) {
+        if(sizeof($out > 1))
+          $out[]= "</ul>";
         $out[] = "<h3>".$value[1]."</h3> <ul>";
       }
-      $newArray[$value[2]][$value[1]] = new Term($value[0]);
+      else {
+        $term = new Term($value[0]);
+        $out[]="<li>".$term."</li>";
+      }
     }
 
-    $out[] = "</sidebar>";
-    return(print_r($newArray,true));
+    $out[] = "</ul></sidebar>";
+    return implode("\n",$out);
  }
 
   //возвращаем конкретный объект из базы
@@ -108,6 +113,89 @@ class term {
     else {
       return FALSE;
     }
+  }
+
+  public static function addTermToProduct($productId,$termId) {
+    $terms = array(); //можно передать сразу массив ключей
+    //проверка значений
+    if($obj=new Game($productId)) {
+      if(!is_array($termId)) {
+        $termId = array($termId);
+      }
+      //обходим все термины переданные как второй параметр
+      foreach($termId as $t) {
+        if($temp = new Term($t)) { //проверяем на существование термина и загружаем его
+          $terms[] = $temp; //добавляем объект-термин в массив
+        }
+        else {
+          return false;
+        }
+      }
+    }
+    else {
+      return false;
+    }
+
+    //обходим все термины, которые надо добавить в цикле
+    $existingTerms = self::loadTermDataArray();
+    foreach($terms as $term) {
+      if(in_array($obj->gameId,$existingTerms[$term->$termId])) {
+        //уже есть данный термин у продукта
+        continue;
+      }
+      $existingTerms[$term->$termId][] = $obj->gameId;
+    }
+
+    self::saveTermDataFromArray($existingTerms);
+
+  }
+
+  private static function saveTermDataFromArray($array) {
+    /*
+      * формат файла csv
+      * termId;productId
+      */
+
+    if (!file_exists(DATA_DIR . '/termdata.csv')) {
+      $file = fopen(DATA_DIR . '/termdata.csv', 'w');
+      fwrite($file, " ");
+      fclose($file);
+    }
+
+    if(sizeof($array)) {
+      //записываем
+      file_put_contents(DATA_DIR . '/termdata.csv', implode("\n", $array));
+    }
+
+  }
+
+  //возвращает все привязанные термины из базы в виде массива
+  //array(termId => array(productId1, productId2,...), и т.д.
+  private static function loadTermDataArray($recache = false) {
+    static $termData = array();
+
+    if ((!sizeof($termData)) || $recache) {
+      /*
+      * формат файла csv
+      * termId;productId
+      */
+
+      if (!file_exists(DATA_DIR . '/termdata.csv')) {
+        $file = fopen(DATA_DIR . '/termdata.csv', 'w');
+        fwrite($file, " ");
+        fclose($file);
+      }
+
+      $array = str_replace("\r", "", trim(file_get_contents(DATA_DIR . '/termdata.csv')));
+      $array = explode("\n", $array);
+
+      foreach ($array as $row) {
+        $temp = explode(";", $row);
+        $termData[$temp[0]][] = $temp[1];
+      }
+    }
+
+    return $termData;
   }
 
   function save() {
@@ -168,7 +256,7 @@ class term {
 
   //текстовое представление объекта
   function __toString() {
-    return "<a href=./index.php?q=term/".$this->termId.">".$this->title."</a>\n";
+    return "<a href=./index.php?q=category_id/".$this->termId.">".$this->title."</a>\n";
 
   }
 

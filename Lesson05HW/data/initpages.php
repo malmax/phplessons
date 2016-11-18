@@ -38,7 +38,7 @@ $index->content = array('template'=>array('contact.tpl.html','contactform.tpl.ht
 $index->pre_header = "";
 echo $index->savePageToFile();
 
-/* ТРЕМИНЫ */
+/* ТЕРМИНЫ */
 $terms = array(
   array('title'=>'Жанр игр','id'=>1,'parent'=>0),
     array('title'=>'Стрелялка','id'=>2,'parent'=>1),
@@ -67,9 +67,6 @@ foreach($terms as $value) {
   $term->termId = $value['id'];
   $term->save();
 }
-
-
-
 
 //обнуляем файл с играми
 file_put_contents(DATA_DIR . '/games.csv',"");
