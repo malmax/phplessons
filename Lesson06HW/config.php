@@ -6,6 +6,8 @@ define('DATA_DIR', SITE_ROOT . '/data');
 define('LIB_DIR', SITE_ROOT . '/lib');
 define('TPL_DIR', SITE_ROOT . '/templates');
 
+define('SMARTY_DIR', SITE_ROOT . '/lib/smarty');
+
 define('SITE_TITLE', 'Урок 6');
 
 /*
