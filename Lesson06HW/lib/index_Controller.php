@@ -10,7 +10,7 @@ class index_Controller extends AbstractController {
   }
 
   public function display() {
-    $view = new index_View($this->title);
+    $view = new View($this->title, 'index.tpl');
     $view->setValue('content', $this->content);
     $view->setValue('menu', array_reverse($this->getMenu()));
 
