@@ -15,12 +15,11 @@ class Site
 	} else {
 		die('Страница ' . $data['page'] . ' не найдена!');
 	}
-	$output = $pageController->getContent();
+	$pageController->display();
 	// В шаблонизатор
 	/*
 	 * ['title' , 'content']
 	 */
 
-	var_dump($output);
 	}
 }
