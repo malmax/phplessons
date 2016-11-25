@@ -10,20 +10,20 @@ class Model {
   static function getContent($type) {
     switch($type) {
       case 'index':
-        $title = 'Гостевая книга';
-        $content = '';
+        $title = 'Hello';
+        $content = 'Это основная страница сайта';
         break;
       case 'about':
         $title = 'About';
         $content = 'This is content about content';
         break;
-//      case 'login':
-//        $title = 'Войдите в свой аккаунт';
-//        $content = '';
-//        break;
       case 'catalog':
         $title = 'Каталог';
         $content = 'Здесь список товаров';
+        break;
+      case 'user':
+        $title = 'Личный кабинет';
+        $content = 'Логин клиентов';
         break;
     }
     return [
